@@ -29,7 +29,6 @@ func main() {
 	}
 }
 
-// Проверка на корректный ввод
 func incorrect(s string) error {
 	replacer := strings.NewReplacer("+", "", "-", "", "*", "", "/", "",
 		"I", "", "II", "", "III", "", "IV", "", "V", "", "VI", "", "VII", "", "VIII", "", "IX", "", "X", "",
@@ -41,7 +40,6 @@ func incorrect(s string) error {
 	return nil
 }
 
-// Проверка на римские числа
 func character(s string) bool {
 	if strings.ContainsAny(s, "I") == true {
 		return true
