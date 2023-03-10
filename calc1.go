@@ -13,7 +13,8 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 	text = strings.ReplaceAll(text, " ", "")
-	text = strings.ReplaceAll(text, "\r\n", "")
+	text = strings.ReplaceAll(text, "\r", "")
+	text = strings.ReplaceAll(text, "\n", "")
 
 	err := incorrect(text)
 	if err != nil {
